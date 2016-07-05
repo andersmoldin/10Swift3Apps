@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +22,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func move(_ sender: UIButton) {
+        if let title = sender.currentTitle {
+            switch title {
+            case "Move left":
+                label.frame.origin.x -= 10
+            case "Move right":
+                label.frame.origin.x += 10
+            case "Move up":
+                label.frame.origin.y -= 10
+            case "Move down":
+                label.frame.origin.y += 10
+            default:
+                label.text = "Fel"
+            }
+        }
+    }
 
 }
 
