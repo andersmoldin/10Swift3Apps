@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var pickColorLabel: UILabel!
+    @IBOutlet weak var colorSlider: UISlider!
+    @IBOutlet weak var blackColorSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +26,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func move(_ sender: UIButton) {
-        if let title = sender.currentTitle {
-            switch title {
+        if let direction = sender.currentTitle {
+            switch direction {
             case "Move left":
                 label.frame.origin.x -= 10
             case "Move right":
@@ -38,6 +41,29 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
+    @IBAction func rotateFonts(_ sender: AnyObject) {
+        let availableFonts = UIFont.familyNames()
+        
+        let random = Int(arc4random_uniform(UInt32(availableFonts.count)))
+        
+        label.font = UIFont(name: availableFonts[random], size: 17)
+    }
+    
+    @IBAction func blackColorSwitch(_ sender: AnyObject) {
+        if blackColorSwitch.isOn {
+            label.textColor = UIColor.black()
+            pickColorLabel.isEnabled = false
+            colorSlider.isEnabled = false
+        } else {
+            label.textColor = UIColor(hue: CGFloat(colorSlider.value)/360, saturation: 100/100, brightness: 100/100, alpha: 1.0)
+            pickColorLabel.isEnabled = true
+            colorSlider.isEnabled = true
+        }
+    }
+    
+    @IBAction func colorSlider(_ sender: AnyObject) {
+        label.textColor = UIColor(hue: CGFloat(colorSlider.value)/360, saturation: 100/100, brightness: 100/100, alpha: 1.0)
+    }
 }
 
