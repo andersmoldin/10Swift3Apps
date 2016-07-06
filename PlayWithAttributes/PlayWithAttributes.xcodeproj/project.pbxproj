@@ -415,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PlayWithAttributes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.moldin.anders.PlayWithAttributes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PlayWithAttributes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.moldin.anders.PlayWithAttributes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +505,7 @@
 				2444F68C1D2B87EE002CF1AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2444F68D1D2B87EE002CF1AA /* Build configuration list for PBXNativeTarget "PlayWithAttributesTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +514,7 @@
 				2444F68F1D2B87EE002CF1AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2444F6901D2B87EE002CF1AA /* Build configuration list for PBXNativeTarget "PlayWithAttributesUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +523,7 @@
 				2444F6921D2B87EE002CF1AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
